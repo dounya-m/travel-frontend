@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './itemes/Footer'
 import NavBar from './itemes/NavBar'
 
 function Layout({children}) {
@@ -8,6 +9,9 @@ function Layout({children}) {
           <NavBar />
         </header>
         <article>{children}</article>
+        <footer>
+          <Footer />
+        </footer>
     </main>
   )
 }
