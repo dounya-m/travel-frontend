@@ -1,20 +1,20 @@
-import React, {useState, useEffect} from 'react'
+// import React, {useState, useEffect} from 'react'
 
 function Home() {
 
-    const [counter, setCounter] = useState(0);
-    const  counterChanger = (type)  => {
-        if(type === "increment"){
-            setCounter(counter + 1);
-        }else{
-            setCounter(counter - 1);
-        }
-    }
-    const [name, setName] = useState("you");
+    // const [counter, setCounter] = useState(0);
+    // const  counterChanger = (type)  => {
+    //     if(type === "increment"){
+    //         setCounter(counter + 1);
+    //     }else{
+    //         setCounter(counter - 1);
+    //     }
+    // }
+    // const [name, setName] = useState("you");
 
-    useEffect(() => {
-      console.log("listen to name " + name);
-    }, [name]);
+    // useEffect(() => {
+    //   console.log("listen to name " + name);
+    // }, [name]);
 
     // useEffect(() => {
     //     console.log("listen to counter: " + name);
@@ -24,18 +24,16 @@ function Home() {
     //     console.log("excute one time: " + name);
     //   }, []);
 
-    const handleInput = (e) => setName(e.target.value);
+    // const handleInput = (e) => setName(e.target.value);
 
 
   return (
-    <div>
-        <h1 className=' text-red-500'>Home</h1>
-        <p>Counter: {counter}</p>
-        <button onClick={() => counterChanger("increment")} >Increment</button>
-        <button onClick={() => counterChanger("likan")}>Decrement</button>
-
-        <input type="text" onChange={handleInput} value={name} />
-    </div>
+    <section>
+      <div className="cercle"></div>
+      <div className="home_main_contant">
+      <h1 className="title">L'ets travel together</h1>
+      </div>
+    </section>
   )
 }
 

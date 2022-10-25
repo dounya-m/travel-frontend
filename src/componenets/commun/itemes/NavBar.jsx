@@ -52,7 +52,7 @@ function NavBar() {
             </li>
         </ul>
         <div>
-            <button className='px-4 py-2 text-white bg-orange-500 rounded-lg hover:bg-orange-400'><Link to='login'>sign-in</Link></button>
+            <button className='px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-400'><Link to='login'>sign-in</Link></button>
         </div>
         
     </section>

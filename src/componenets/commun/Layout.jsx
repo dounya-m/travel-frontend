@@ -4,7 +4,7 @@ import NavBar from './itemes/NavBar'
 
 function Layout({children}) {
   return (
-    <main className=' font-Popping'>
+    <main className=' font-Popping bg-slate-50'>
         <header>
           <NavBar />
         </header>
