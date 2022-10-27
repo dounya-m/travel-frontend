@@ -1,5 +1,6 @@
 // import React, {useState, useEffect} from 'react'
 
+import Header from '../componenets/home/Header'
 function Home() {
 
     // const [counter, setCounter] = useState(0);
@@ -28,12 +29,10 @@ function Home() {
 
 
   return (
-    <section>
-      <div className="cercle"></div>
-      <div className="home_main_contant">
-      <h1 className="title">L'ets travel together</h1>
-      </div>
+    <section className="relative ">
+      < Header />
     </section>
+    
   )
 }
 

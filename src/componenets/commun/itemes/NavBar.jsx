@@ -9,7 +9,7 @@ function NavBar() {
         {/* <h3 className='absolute mb-10 text-3xl font-bold'><HiBars4 /></h3> */}
         {/* <h3 className='absolute mb-10 text-3xl font-bold'>x</h3> */}
         <div>
-        <h3 className='text-2xl font-bold'>
+        <h3 className='text-3xl font-bold'>
             Tri<span className='text-orange-600 '>pgo</span>
         </h3>
         </div>

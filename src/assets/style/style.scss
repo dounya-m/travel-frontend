@@ -9,27 +9,97 @@
 
 //cercle 
 .cercle{
-    width: 150px;
-    height: 150px;
-    background-color: rgba(255, 132, 0, 0.493);
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 179, 0, 0.493);
     border-radius: 100%;
     position: absolute;
-    top: 0%;  
+    top: -10%;  
     left: 15%;
     filter: blur(30px); 
 }
-.home_main_contant{
-    padding: {
-        top: 5rem;
-        bottom: 5rem;
-        left: 4rem;
-        right: 4rem;
-    };
-    .title{
-        font-family: 'Noto+Serif', serif;
-        font-size: 3.2rem;
-        font-weight: 700;
-        color: rgb(1, 7, 62);
-        text-transform: capitalize;
+.chemin{
+    border-bottom: solid 1px rgb(204, 204, 204);
+    border-style: dashed;
+    width: 6vw;
+}
+.nap{
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter:drop-shadow(5px -2px 6px rgb(123, 123, 123)); 
+}
+.nap:hover{
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter:drop-shadow(5px -2px 6px rgb(123, 123, 123)); 
+    transition:  left 0.5s top 0.5s;
+    left: 0.1px;
+    top: 5px;
+}
+.desert{
+    // -webkit-filter: drop-shadow(5px 5px 5px #222);   
+    filter:drop-shadow(4px -11px 11px  rgba(206, 206, 206, 0.767)); 
+}
+.line{
+    width: 100%;
+    height: 50rem;
+    background-color: transparent;
+    border-top: 2px solid rgb(220, 220, 220);
+    border-style: dashed;
+    border-radius: 90% 90% 50% 10%;
+    .dot{
+        width: 15px;
+        height: 15px;
+        background-color: rgba(255, 140, 0, 0.654);
+        border-radius: 100%;
+        position: absolute;
+        top: 3%;
+        left: 30%;
+        
     }
+    .dot2{
+        width: 15px;
+        height: 15px;
+        background-color: rgba(255, 140, 0, 0.654);
+        border-radius: 100%;
+        position: absolute;
+        top: 20%;
+        left: 90%;
+    }
+    .miniBus{
+        width: 50px;
+        position: absolute;
+        top: -3.6%;
+        left: 60%;
+    }
+}
+.home_main_contant{
+    // display: flex;
+    padding: {
+        top: 3rem;
+    };
+    .main_title{
+            .title{
+            font-family: 'Noto+Serif', serif;
+            font-weight: 700;
+            color: rgb(1, 7, 62);
+            text-transform: capitalize;
+        }    
+    }
+    // .main_images{
+        // height: 40vh;
+        // .nap{
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     top: 100%;
+        //     left: 0;
+        // }
+        // .desert{
+        //     width: 0%;
+        //     height: 100%;
+            // position: absolute;
+            // top: -10%;
+            // right: -15rem;
+        // }
+    // }
+
 }
