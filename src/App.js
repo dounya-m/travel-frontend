@@ -1,19 +1,25 @@
+import { useEffect } from 'react';
 import './App.css';
 import './assets/style/style.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from './pages/Home';
+import axios from 'axios'
+import {Home, Register, Login, Booking, ErrorNotFound} from './pages/index';
 import Layout from './componenets/commun/Layout';
-import Register from './pages/Register';
-import Login from './pages/Login'
-import ErrorNotFound from './pages/ErrorNotFound';
 
 
+
+//creat base url for axios
+axios.defaults.baseURL = 'http://localhost:8000/api'
 
 function App() {
+  useEffect(() => {
+    document.title = 'Tripgo'
+}, [])
   return (
     <Router>
       <Routes>
         <Route  path="/" element={<Layout>{<Home />}</Layout>} />
+        <Route path="/booking" element={<Layout> {<Booking />} </Layout>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
 

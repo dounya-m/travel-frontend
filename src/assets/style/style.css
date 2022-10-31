@@ -33,10 +33,6 @@
 .nap:hover {
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px -2px 6px #7b7b7b);
-  -webkit-transition: left 0.5s top 0.5s;
-  transition: left 0.5s top 0.5s;
-  left: 0.1px;
-  top: 5px;
 }
 
 .desert {
