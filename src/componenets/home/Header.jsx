@@ -23,7 +23,7 @@ function Header() {
                 </div> 
             </section>
             <div className='-mt-[17rem]'>
-                <img className='relative z-40 nap' src={nap} alt="" /> 
+                <img className='relative nap' src={nap} alt="" /> 
                 <div className='absolute z-0  w-[60vw] py-6 bg-white shadow-lg border-orange-50 -mt-[23rem]  
                 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <Booking />
