@@ -10,9 +10,7 @@ function Loginform() {
         const newData = new FormData();
         newData.append("email", data.email);
         newData.append("password", data.password);
-        
         console.log(data)
-        
         //fetch data 
         fetch('http://localhost:1080/api/users/login',
         {
@@ -21,13 +19,9 @@ function Loginform() {
                 "email" : data.email,
                 "password" : data.password
             }),
-            headers: 
-            {
-                'Access-Control-Allow-Origin':'*',
-                'Content-type': 'application/json; charset=UTF-8'
-            }
         })
         .then(response => response.json())
+        
         //store the token
         .then(data => {
             if(data === "email"){
@@ -41,7 +35,9 @@ function Loginform() {
         });
         reset();
     }
-  return (
+
+    
+return (
         <form class="space-y-4 md:space-y-6 my-auto w-[25rem]" onSubmit={handleSubmit(onSubmit)} >
             <div class="space-y-1">
                 <label class="block font-medium text-gray-700 text-sm" 

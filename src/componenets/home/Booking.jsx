@@ -12,6 +12,7 @@ function Booking() {
     const [depart, setDepart] = useState('');
     const [arrive, setArrive] = useState('');
     const [date, setDate] = useState('');
+
     console.log(depart);
     console.log(arrive);
     console.log(date);
@@ -42,7 +43,7 @@ function Booking() {
     
     // search for trip with api 
     const searchTrip = async () => {
-      console.log("searchTrip");  
+
       await axios.post(`http://localhost:1080/api/trip/bookingtrip?depart=${depart}`)
       .then(res => {
         console.log('res', res);
@@ -52,6 +53,8 @@ function Booking() {
         console.log(err, "this trip don't exist");
       })
     };
+
+    
 
     
   return (
