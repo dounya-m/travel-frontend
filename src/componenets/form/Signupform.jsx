@@ -2,7 +2,7 @@ import {React, useState} from 'react'
 import { useForm } from "react-hook-form";
 // import axios from 'axios'
 import {Link} from 'react-router-dom'   
-
+import {Proxy} from '../../config/Proxy'
 function Signupform() {
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePassword = () => {
@@ -16,7 +16,7 @@ function Signupform() {
         newData.append("email", data.email);
         newData.append("password", data.password);
 
-        fetch('http://localhost:1080/api/users', 
+        fetch(`${Proxy}/users`, 
         {
             method:"POST", 
             body:JSON.stringify({

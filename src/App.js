@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from 'axios'
 import {Home, Register, Login, Booking, ErrorNotFound} from './pages/index';
 import Layout from './componenets/commun/Layout';
-
+import TripContextprovider from './context/TripContext'
 
 
 //creat base url for axios
@@ -17,6 +17,7 @@ function App() {
 }, [])
   return (
     <Router>
+      <TripContextprovider>
       <Routes>
         <Route  path="/" element={<Layout>{<Home />}</Layout>} />
         <Route path="/booking" element={<Layout> {<Booking />} </Layout>} />
@@ -26,6 +27,7 @@ function App() {
         {/* Eroor 404 page */}
         <Route path="*" element={<ErrorNotFound />} />
         </Routes>
+        </TripContextprovider>
     </Router>
   );
 }

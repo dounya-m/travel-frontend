@@ -1,11 +1,14 @@
-import axios from 'axios';
-import {React, useState} from 'react'
+
+import {React, useState, useContext} from 'react'
 import AsyncSelect from 'react-select/async'
+import {TripContext} from '../../context/TripContext';
 
 const { cities } = require("list-of-moroccan-cities"); 
 
 
+
 function Booking() {
+  const {searchTrip} = useContext(TripContext)
   // this.handleChange = this.handleChange.bind(this);
     // handleInputChange function to get the value of the input
     //define the depart and arrival cities
@@ -42,16 +45,8 @@ function Booking() {
     };
     
     // search for trip with api 
-    const searchTrip = async () => {
-
-      await axios.post(`http://localhost:1080/api/trip/bookingtrip?depart=${depart}`)
-      .then(res => {
-        console.log('res', res);
-        // console.log(res.data);
-      })
-      .catch(err => {
-        console.log(err, "this trip don't exist");
-      })
+    const searchTripresults = async () => {
+      searchTrip(depart)
     };
 
     
@@ -62,7 +57,7 @@ function Booking() {
 //EXECUTE THE SEARCHTRIP FUNCTION without loading the page
 onSubmit={e => {
   e.preventDefault();
-  searchTrip();
+  searchTripresults();
 }}
   className='flex flex-col items-center justify-center gap-4'>
     <div

@@ -1,0 +1,1 @@
+export const Proxy = 'http://localhost:5000/api'

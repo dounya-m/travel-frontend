@@ -12,7 +12,7 @@ function Loginform() {
         newData.append("password", data.password);
         console.log(data)
         //fetch data 
-        fetch('http://localhost:1080/api/users/login',
+        fetch('http://localhost:5000/api/users/login',
         {
             method:"POST",
             body:JSON.stringify({
@@ -64,6 +64,7 @@ return (
                 </p>
             </div>
         </form>
+        
   )
 }
 
