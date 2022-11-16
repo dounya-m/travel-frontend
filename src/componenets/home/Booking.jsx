@@ -9,9 +9,7 @@ const { cities } = require("list-of-moroccan-cities");
 
 function Booking() {
   const {searchTrip} = useContext(TripContext)
-  // this.handleChange = this.handleChange.bind(this);
-    // handleInputChange function to get the value of the input
-    //define the depart and arrival cities
+
     const [depart, setDepart] = useState('');
     const [arrive, setArrive] = useState('');
     const [date, setDate] = useState('');

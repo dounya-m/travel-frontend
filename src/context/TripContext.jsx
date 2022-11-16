@@ -10,7 +10,7 @@ const TripContextprovider = ({children}) => {
     const navigate = useNavigate()
     const [trips, setTrips] = useState([])
     const searchTrip = async(depart) =>{
-        const res = await axios.post(`${Proxy}/trip/bookingtrip?depart=${depart}`)
+    await axios.post(`${Proxy}/trip/bookingtrip?depart=${depart}`)
         .then(res => {
             setTrips(res.data)
             navigate('/booking')
@@ -19,6 +19,7 @@ const TripContextprovider = ({children}) => {
             alert('no trip in this time')
             })
     }
+
     const values = {searchTrip, trips}
     return <TripContext.Provider value={values}>
         {children}
