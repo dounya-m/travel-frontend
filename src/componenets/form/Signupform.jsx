@@ -1,4 +1,5 @@
 import {React, useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 // import axios from 'axios'
 import {Link} from 'react-router-dom'   
@@ -8,6 +9,7 @@ function Signupform() {
     const togglePassword = () => {
         setPasswordShown(!passwordShown);
     };
+    const navigate = useNavigate()
     const { register, handleSubmit, reset} = useForm();
 
     const onSubmit = (data) => {
@@ -35,6 +37,8 @@ function Signupform() {
         .then(data => {
             console.log(data)
             localStorage.setItem('token', data.token)
+            navigate('/')
+            
         });
         reset();
     }

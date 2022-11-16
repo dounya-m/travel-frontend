@@ -7,6 +7,12 @@
 }
 
 /* Nav Bar responsive */
+.booking_line {
+  width: 10rem;
+  border-bottom: 1px solid #5b5b5b;
+  border-style: dashed;
+}
+
 .cercle {
   width: 200px;
   height: 200px;

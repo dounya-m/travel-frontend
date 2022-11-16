@@ -9,9 +9,9 @@ function NavBar() {
         {/* <h3 className='absolute mb-10 text-3xl font-bold'><HiBars4 /></h3> */}
         {/* <h3 className='absolute mb-10 text-3xl font-bold'>x</h3> */}
         <div>
-        <h3 className='text-3xl font-bold'>
+        <NavLink to="/" className='text-3xl font-bold'>
             Tri<span className='text-orange-600 '>pgo</span>
-        </h3>
+        </NavLink>
         </div>
         <ul className='flex gap-10 font-medium uppercase'>
             <li>
@@ -52,7 +52,7 @@ function NavBar() {
             </li>
         </ul>
         <div>
-            <button className='px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-400'><Link to='login'>sign-in</Link></button>
+            <button className='px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-400'><Link to='/login'>sign-in</Link></button>
         </div>
         
     </section>
