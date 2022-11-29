@@ -35,8 +35,9 @@ function Signupform() {
         .then(response => response.json())
         //store the token
         .then(data => {
-            console.log(data)
+            console.log(JSON.stringify(data.user))
             localStorage.setItem('token', data.token)
+            window.localStorage.setItem('id', data.user['_id'])
             navigate('/')
             
         });

@@ -6,7 +6,6 @@ import {TripContext} from '../../context/TripContext'
 function Bookheader() {
   const {trips} = useContext(TripContext)
   console.log(trips);
-
   
   return (
     <div>

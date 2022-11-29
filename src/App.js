@@ -3,7 +3,7 @@ import './App.css';
 import './assets/style/style.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from 'axios'
-import {Home, Register, Login, Booking, ErrorNotFound} from './pages/index';
+import {Home, Register, Login, Booking, ErrorNotFound, Billet} from './pages/index';
 import Layout from './componenets/commun/Layout';
 import TripContextprovider from './context/TripContext'
 
@@ -21,6 +21,7 @@ function App() {
       <Routes>
         <Route  path="/" element={<Layout>{<Home />}</Layout>} />
         <Route path="/booking" element={<Layout> {<Booking />} </Layout>} />
+        <Route path="/billet" element={<Layout> {<Billet />} </Layout>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
 

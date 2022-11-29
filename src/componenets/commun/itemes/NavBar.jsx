@@ -1,8 +1,15 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useNavigate } from 'react-router-dom'
 import "../../../assets/style/style.css"
 // import { HiBars4 } from 'react-icons/hi2';
 function NavBar() {
+    const token = localStorage.getItem('id')
+    const navigate = useNavigate()
+
+    const logout = () => {
+        window.localStorage.clear()
+        navigate('/login')
+    }
 
   return (
     <section className='flex items-center justify-between p-6'>
@@ -51,8 +58,12 @@ function NavBar() {
                     </NavLink>
             </li>
         </ul>
+        
         <div>
-            <button className='px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-400'><Link to='/login'>sign-in</Link></button>
+            <button onClick={token ?  logout : 'null'} className='px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-400'><Link to={token? '/' : '/login'}>
+                
+            {token? 'log-out' : 'sign-in'}
+                </Link></button>
         </div>
         
     </section>

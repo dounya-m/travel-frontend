@@ -1,11 +1,30 @@
 import React from 'react'
+// import {useNavigate} from 'react-router-dom'
 import {TripContext} from '../../context/TripContext'
-import ReservatinFrorm from '../../componenets/form/ReservatinFrorm'
 import billet from '../../assets/images/Capture.PNG'
 import busBooking from '../../assets/icones/busBooking.png'
+import { Proxy } from '../../config/Proxy'
+import axios from 'axios'
+
 
 function BookingResults() {
   const {trips} = React.useContext(TripContext)
+  // const item = window.localStorage.getItem('token')
+  const iditem = window.localStorage.getItem('id')
+  console.log(iditem);
+  // const navigate = useNavigate()
+
+  const booking = async (user, trip) => {
+    const res = await axios.post(`${Proxy}/book/${user}/${trip}`)
+    if(res && res.data){
+      alert('reservation ')
+      // navigate('/billet')
+      
+    }else{
+      alert('try again')
+    }
+  }
+  
 
   return (
   <div>
@@ -34,10 +53,10 @@ function BookingResults() {
         </section>
         </div>
         <div className='ml-[13rem] justify-items-end '>
-        <button className='p-2 text-white capitalize bg-blue-600 rounded-lg hover:bg-blue-400'>reserver</button>
+        <button onClick={() => {booking(iditem, v._id)}} className='p-2 text-white capitalize bg-blue-600 rounded-lg hover:bg-blue-400'>reserver</button>
         </div>
       </div>
-      <ReservatinFrorm />
+
       </>
     ))}
   </div>
